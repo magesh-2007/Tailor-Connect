@@ -1,0 +1,45 @@
+{
+  "name": "tailorconnect-backend",
+  "version": "1.0.0",
+  "description": "Production-style backend for TailorConnect Tailoring Services & Learning Platform",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "dev:safe": "node scripts/kill-port.js && nodemon src/server.js",
+    "kill-port": "node scripts/kill-port.js",
+    "seed": "node src/seed/seed.js",
+    "setup-roles": "node src/seed/setup-roles.js",
+    "verify": "node verify-auth.js",
+    "test": "node test-backend.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3",
+    "express-rate-limit": "^7.2.0",
+    "google-auth-library": "^11.1.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.10.2",
+    "multer": "^1.4.5-lts.1",
+    "pdfkit": "^0.15.0",
+    "socket.io": "^4.7.5",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "keywords": [
+    "tailorconnect",
+    "express",
+    "mongodb",
+    "tailoring",
+    "learning-platform"
+  ],
+  "author": "TailorConnect Team",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
